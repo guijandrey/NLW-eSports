@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./NLW.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'inter', sans-serif;
+    line-height: 160%;
+}
+header {
+    margin-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div{
+    width: 100%;
+    border-radius: 50%; /* arredonda a borda em 50%*/
+}
+
+header div img:hover{
+    transform: scale(1.1); /* aplica uma transformação de aumentar a escala*/
+}
+
+header div img{
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%); /* aplica um degrade dessas cores no item*/
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s; /* aplica transição de 3 segundos no item "transform"*/
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div{
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul{
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li{
+    transition: .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1)
+}
+
+.game-list img {
+    border-radius: 8px;
+    width: 90px;
+}
+
+.channel-list img{
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+}
+
+/*animation*/
+
+main section{
+    animation: fromBottom .5s 150ms backwards;
+}
+
+header div{
+    animation: fromTop .5s 200ms backwards; /* define o tempo de animação "5s" e o delay 200Ms*/
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: 300ms;
+}
+main section:nth-child(3){
+    animation-delay: 0ms;
+}
+
+@keyframes fromTop {   /* definir a animação,inicio--  from=partir de onde -- to- para onde*/
+    from{
+        opacity: 0;
+        transform: translateY(-30px); /* o item vem do -30px e vai ate o lugar inicial*/
+    }
+ 
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translatey(30px); /* o item vem do -30px e vai ate o lugar inicial*/
+    }
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
