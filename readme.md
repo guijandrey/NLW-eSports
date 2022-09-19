@@ -1,6 +1,6 @@
  # NLW eSport
 
- <div align-text="center">![preview](./.github/preview.png)</div>
+ ![preview](./.github/preview.png)
 
  >Tilha Explorer
 
